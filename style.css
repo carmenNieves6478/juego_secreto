@@ -62,10 +62,18 @@ body::before {
     font-weight: 700;
     border: none;
     margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.container__boton:hover:not(:disabled) {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
 }
 
 .container__boton:disabled {
     background: #898989;
+    cursor: not-allowed;
 }
 
 .container__texto {
@@ -81,12 +89,18 @@ body::before {
     height: 72px;
     border-radius: 16px;
     background-color: #FFF;
-    border: none;
+    border: 2px solid transparent;
     color: #1875E8;
     padding: 2rem;
     font-size: 24px;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.container__input:focus {
+    border-color: #1875E8;
 }
 
 .container__botones {
